@@ -15,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "link": "npm-run-all -s link:*",
+    "link:lib-self": "cd ./path-to-lib && npm link",
+    "link:lib-react": "cd ./path-to-lib && npm link ./path-to-app/node_modules/react",
+    "link:app-to-lib": "npm link library-name"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
